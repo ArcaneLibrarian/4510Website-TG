@@ -152,6 +152,27 @@ body {
   padding: 44px 0 18px 0; /* Top-heavy spacing */
 }
 
+/* Apply the background image only to the hero area */
+.hero-bg { /* Target only hero sections with hero-bg class */
+  background-image: /* Stack overlay + image for readable text */
+    linear-gradient( /* Dark overlay layer */
+      rgba(7, 10, 18, 0.78), /* Give strong contrast for text */
+      rgba(7, 10, 18, 0.90)  /* Slightly darker at bottom */
+    ), /* End overlay */
+    url("photos/360_F_712277895_SLYww6vGgGhl5tTZu4mG2UFA6vKId1jj.jpg"); /* Image path relative to assets/style.css */
+
+  background-size: cover; /* Cover hero area */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* No tiling */
+  border-bottom: 1px solid var(--border); /* Subtle separation line */
+  border-radius: 0; /* Keep it flush edge-to-edge (clean) */
+} /* End hero-bg */
+
+/* Optional: add extra padding so the background “breathes” */
+.hero.hero-bg { /* More specific selector for hero with background */
+  padding: 64px 0 36px 0; /* Larger padding for a premium look */
+} /* End optional padding tweak */
+
 /* Hero grid */
 .hero-grid {
   display: grid; /* Grid layout */
