@@ -1,0 +1,88 @@
+<!-- about.html -->
+<!-- This is a simple About page that shares your story and links back to Home. -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Basic metadata -->
+    <meta charset="utf-8" /> <!-- Character encoding -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" /> <!-- Responsive scaling -->
+
+    <!-- Page title -->
+    <title>About | Tom G.</title>
+
+    <!-- Link to shared styles -->
+    <link rel="stylesheet" href="assets/style.css" /> <!-- Reuse same CSS -->
+
+    <!-- Optional JS -->
+    <script defer src="assets/script.js"></script> <!-- Theme + year -->
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header class="site-header">
+      <div class="container">
+        <!-- Branding -->
+        <div class="brand">
+          <span class="brand__mark" aria-hidden="true">TG</span> <!-- Initials badge -->
+          <span class="brand__text">Tom G.</span> <!-- Name -->
+        </div>
+
+        <!-- Navigation -->
+        <nav class="nav" aria-label="Primary navigation">
+          <a class="nav__link" href="index.html">Home</a> <!-- Back to home -->
+          <a class="nav__link nav__link--active" href="about.html">About</a> <!-- Current page -->
+          <button class="btn btn--ghost" type="button" id="themeToggle" aria-label="Toggle theme">
+            Toggle theme
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main -->
+    <main class="section">
+      <div class="container narrow">
+        <!-- Page heading -->
+        <h1 class="section__title">About me</h1>
+
+        <!-- Bio text (edit freely) -->
+        <p class="prose">
+          I’m Tom, an accounting student in Utah. I’m building a toolkit that blends core accounting fundamentals
+          with practical analysis—cleaning data, spotting risk signals, and explaining results clearly.
+        </p>
+
+        <p class="prose">
+          This site doubles as my ACC 4510 portfolio and a place to collect projects I’m proud of. Over time,
+          I’ll add write-ups, visuals, and links to the work itself.
+        </p>
+
+        <!-- Interests (optional personality) -->
+        <h2 class="section__subtitle">Interests</h2>
+        <ul class="list">
+          <li class="list__item">Audit and risk thinking (finding “what could go wrong” before it does)</li>
+          <li class="list__item">Data analysis that tells a story, not just a spreadsheet</li>
+          <li class="list__item">Sci-fi and fantasy reading (yes, I contain multitudes)</li>
+        </ul>
+
+        <!-- Links (replace placeholders) -->
+        <h2 class="section__subtitle">Links</h2>
+        <ul class="list">
+          <li class="list__item"><a href="#" aria-disabled="true">LinkedIn (add link)</a></li>
+          <li class="list__item"><a href="#" aria-disabled="true">GitHub (add link)</a></li>
+          <li class="list__item"><a href="#" aria-disabled="true">Resume PDF (add file + link)</a></li>
+        </ul>
+
+        <!-- Back button -->
+        <a class="btn" href="index.html">Back to Home</a>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <p class="footer__small">
+          © <span id="year"></span> Tom G.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
