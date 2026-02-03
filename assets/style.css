@@ -1,0 +1,304 @@
+/* assets/style.css */
+/* Minimal, readable styling with light/dark support via data-theme on <html>. */
+
+/* Reset-ish defaults */
+* {
+  box-sizing: border-box; /* Keep sizing sane */
+}
+
+/* Theme variables (light is default) */
+:root {
+  /* Color variables */
+  --bg: #ffffff; /* Page background */
+  --text: #111827; /* Main text */
+  --muted: #4b5563; /* Secondary text */
+  --card: #f9fafb; /* Card background */
+  --border: #e5e7eb; /* Borders */
+  --accent: #2563eb; /* Accent color */
+  --accent-2: #0f172a; /* Darker accent for contrast */
+
+  /* Layout variables */
+  --container: 1100px; /* Max width */
+  --radius: 14px; /* Rounded corners */
+  --shadow: 0 10px 25px rgba(0, 0, 0, 0.06); /* Soft shadow */
+}
+
+/* Dark theme variables */
+html[data-theme="dark"] {
+  --bg: #0b1220; /* Dark background */
+  --text: #e5e7eb; /* Light text */
+  --muted: #a1a1aa; /* Muted text */
+  --card: #111a2e; /* Card background */
+  --border: #22304a; /* Borders */
+  --accent: #60a5fa; /* Accent */
+  --accent-2: #e5e7eb; /* High contrast text */
+}
+
+/* Base body styling */
+body {
+  margin: 0; /* Remove default margin */
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; /* Readable default font */
+  background: var(--bg); /* Apply theme background */
+  color: var(--text); /* Apply theme text color */
+  line-height: 1.6; /* Comfortable reading */
+}
+
+/* Container utility */
+.container {
+  width: min(100% - 2rem, var(--container)); /* Responsive max width */
+  margin-inline: auto; /* Center */
+}
+
+/* Narrow content utility (for About page) */
+.narrow {
+  max-width: 70ch; /* Good reading width */
+}
+
+/* Skip link (hidden until focus) */
+.skip-link {
+  position: absolute; /* Remove from flow */
+  left: -999px; /* Hide off-screen */
+  top: 1rem; /* Position near top */
+  background: var(--accent); /* Visible color */
+  color: white; /* Contrast */
+  padding: 0.5rem 0.75rem; /* Clickable area */
+  border-radius: 0.5rem; /* Rounded */
+}
+.skip-link:focus {
+  left: 1rem; /* Bring into view */
+}
+
+/* Header styles */
+.site-header {
+  border-bottom: 1px solid var(--border); /* Separation line */
+  background: rgba(0, 0, 0, 0); /* Transparent (theme handles bg) */
+}
+.site-header .container {
+  display: flex; /* Horizontal layout */
+  align-items: center; /* Vertical center */
+  justify-content: space-between; /* Brand left, nav right */
+  padding: 1rem 0; /* Spacing */
+}
+
+/* Brand styles */
+.brand {
+  display: flex; /* Align mark + text */
+  align-items: center; /* Vertical center */
+  gap: 0.75rem; /* Space between items */
+}
+.brand__mark {
+  display: inline-flex; /* Badge-like */
+  align-items: center; /* Center content */
+  justify-content: center; /* Center content */
+  width: 36px; /* Size */
+  height: 36px; /* Size */
+  border-radius: 999px; /* Circle */
+  background: var(--accent); /* Accent background */
+  color: white; /* Contrast text */
+  font-weight: 700; /* Bold initials */
+}
+.brand__text {
+  font-weight: 700; /* Bold name */
+}
+
+/* Nav styles */
+.nav {
+  display: flex; /* Horizontal nav */
+  align-items: center; /* Center vertically */
+  gap: 0.75rem; /* Spacing */
+  flex-wrap: wrap; /* Wrap on small screens */
+}
+.nav__link {
+  color: var(--text); /* Theme text */
+  text-decoration: none; /* Remove underline */
+  padding: 0.35rem 0.5rem; /* Clickable area */
+  border-radius: 0.5rem; /* Rounded */
+  border: 1px solid transparent; /* Keep layout stable */
+}
+.nav__link:hover {
+  border-color: var(--border); /* Subtle hover */
+}
+.nav__link--active {
+  border-color: var(--border); /* Show current page */
+  background: var(--card); /* Subtle highlight */
+}
+
+/* Button styles */
+.btn {
+  display: inline-block; /* Button-like links */
+  background: var(--accent); /* Accent background */
+  color: white; /* Contrast text */
+  text-decoration: none; /* Remove underline */
+  padding: 0.55rem 0.85rem; /* Comfortable click target */
+  border-radius: 0.75rem; /* Rounded */
+  border: 1px solid transparent; /* Stable sizing */
+  font-weight: 600; /* Slightly bold */
+  cursor: pointer; /* Pointer cursor */
+}
+.btn:hover {
+  filter: brightness(0.95); /* Small hover effect */
+}
+.btn--secondary {
+  background: transparent; /* Outline style */
+  color: var(--text); /* Theme text */
+  border-color: var(--border); /* Border */
+}
+.btn--ghost {
+  background: transparent; /* Minimal button */
+  color: var(--text); /* Theme text */
+  border-color: var(--border); /* Outline */
+}
+
+/* Hero section */
+.hero {
+  padding: 2.5rem 0; /* Top/bottom space */
+}
+.hero__grid {
+  display: grid; /* Two-column layout */
+  grid-template-columns: 1.2fr 0.8fr; /* Ratio */
+  gap: 1.5rem; /* Space between columns */
+  align-items: start; /* Align to top */
+}
+@media (max-width: 900px) {
+  .hero__grid {
+    grid-template-columns: 1fr; /* Stack on small screens */
+  }
+}
+.hero__title {
+  font-size: clamp(1.8rem, 3vw, 2.6rem); /* Responsive size */
+  line-height: 1.15; /* Tighter heading */
+  margin: 0 0 0.75rem 0; /* Spacing */
+}
+.hero__subtitle {
+  margin: 0 0 1.25rem 0; /* Spacing */
+  color: var(--muted); /* Muted text */
+}
+
+/* CTA row */
+.cta {
+  display: flex; /* Row of buttons */
+  gap: 0.75rem; /* Spacing */
+  flex-wrap: wrap; /* Wrap on narrow */
+  margin-bottom: 1.25rem; /* Space below */
+}
+
+/* Quick facts list */
+.quick-facts {
+  list-style: none; /* Remove bullets */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+  display: flex; /* Row */
+  gap: 0.5rem; /* Space */
+  flex-wrap: wrap; /* Wrap */
+}
+.quick-facts__item {
+  border: 1px solid var(--border); /* Outline */
+  background: var(--card); /* Card background */
+  padding: 0.35rem 0.6rem; /* Spacing */
+  border-radius: 999px; /* Pill shape */
+}
+.tag {
+  font-weight: 700; /* Label emphasis */
+  margin-right: 0.35rem; /* Space */
+}
+
+/* Generic section styling */
+.section {
+  padding: 2rem 0; /* Vertical spacing */
+}
+.section__title {
+  margin: 0 0 0.5rem 0; /* Spacing */
+  font-size: 1.6rem; /* Heading size */
+}
+.section__subtitle {
+  margin: 1.5rem 0 0.5rem 0; /* Spacing */
+  font-size: 1.2rem; /* Smaller heading */
+}
+.section__lede {
+  margin: 0 0 1.5rem 0; /* Spacing */
+  color: var(--muted); /* Muted */
+}
+
+/* Card component */
+.card {
+  background: var(--card); /* Card background */
+  border: 1px solid var(--border); /* Border */
+  border-radius: var(--radius); /* Rounded */
+  padding: 1rem; /* Inner spacing */
+  box-shadow: var(--shadow); /* Soft shadow */
+}
+.card__title {
+  margin: 0 0 0.5rem 0; /* Spacing */
+  font-size: 1.1rem; /* Title size */
+}
+.card__text {
+  margin: 0 0 0.75rem 0; /* Spacing */
+  color: var(--muted); /* Muted */
+}
+.card__meta {
+  margin: 0 0 0.75rem 0; /* Spacing */
+}
+.card__link {
+  color: var(--accent); /* Accent link */
+  text-decoration: none; /* No underline */
+  font-weight: 600; /* Emphasis */
+}
+
+/* Pills */
+.pill {
+  display: inline-block; /* Inline badge */
+  padding: 0.2rem 0.5rem; /* Spacing */
+  border-radius: 999px; /* Pill */
+  border: 1px solid var(--border); /* Outline */
+  margin-right: 0.35rem; /* Spacing */
+  font-size: 0.85rem; /* Smaller text */
+}
+
+/* Grid for project cards */
+.grid {
+  display: grid; /* Grid layout */
+  grid-template-columns: repeat(3, 1fr); /* Three columns */
+  gap: 1rem; /* Spacing */
+}
+@media (max-width: 1000px) {
+  .grid {
+    grid-template-columns: 1fr; /* Stack */
+  }
+}
+
+/* List styling */
+.list {
+  margin: 0; /* Reset margin */
+  padding-left: 1.2rem; /* Indent bullets */
+}
+.list__item {
+  margin: 0.35rem 0; /* Spacing */
+}
+
+/* Footer */
+.site-footer {
+  border-top: 1px solid var(--border); /* Separation */
+  padding: 2rem 0; /* Spacing */
+}
+.footer__grid {
+  display: grid; /* Grid layout */
+  grid-template-columns: 1fr auto; /* Two columns */
+  gap: 1rem; /* Spacing */
+  align-items: center; /* Vertical center */
+}
+@media (max-width: 800px) {
+  .footer__grid {
+    grid-template-columns: 1fr; /* Stack */
+  }
+}
+.footer__title {
+  margin: 0 0 0.5rem 0; /* Spacing */
+}
+.footer__text {
+  margin: 0 0 1rem 0; /* Spacing */
+  color: var(--muted); /* Muted */
+}
+.footer__small {
+  color: var(--muted); /* Muted */
+  font-size: 0.95rem; /* Slightly smaller */
+}
