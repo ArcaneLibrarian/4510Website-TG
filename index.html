@@ -1,0 +1,185 @@
+<!-- index.html -->
+<!-- This is the home page for your GitHub Pages site. -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Basic metadata -->
+    <meta charset="utf-8" /> <!-- Character encoding -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" /> <!-- Responsive scaling -->
+
+    <!-- Page title (shows in browser tab) -->
+    <title>Tom G. | Accounting Student</title>
+
+    <!-- Site description (helps with SEO/snippets) -->
+    <meta name="description" content="Personal site for Tom G. — accounting student portfolio, projects, and contact info." />
+
+    <!-- Link to the shared stylesheet -->
+    <link rel="stylesheet" href="assets/style.css" /> <!-- Styles for all pages -->
+
+    <!-- Optional: JavaScript for small enhancements -->
+    <script defer src="assets/script.js"></script> <!-- Runs after HTML loads -->
+  </head>
+
+  <body>
+    <!-- Skip link for accessibility (keyboard users) -->
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <!-- Header: site name + navigation -->
+    <header class="site-header">
+      <div class="container">
+        <!-- Branding / site title -->
+        <div class="brand">
+          <span class="brand__mark" aria-hidden="true">TG</span> <!-- Simple initials badge -->
+          <span class="brand__text">Tom G.</span> <!-- Your name -->
+        </div>
+
+        <!-- Navigation links -->
+        <nav class="nav" aria-label="Primary navigation">
+          <!-- Home link -->
+          <a class="nav__link nav__link--active" href="index.html">Home</a>
+          <!-- About link -->
+          <a class="nav__link" href="about.html">About</a>
+          <!-- External link placeholder (update when ready) -->
+          <a class="nav__link" href="#projects">Projects</a>
+          <!-- Contact link (scrolls to footer section) -->
+          <a class="nav__link" href="#contact">Contact</a>
+
+          <!-- Theme toggle button (optional) -->
+          <button class="btn btn--ghost" type="button" id="themeToggle" aria-label="Toggle theme">
+            Toggle theme
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main content -->
+    <main id="main">
+      <!-- Hero section -->
+      <section class="hero">
+        <div class="container hero__grid">
+          <!-- Left side: intro text -->
+          <div class="hero__copy">
+            <h1 class="hero__title">
+              Accounting student building practical skills—one project at a time.
+            </h1>
+
+            <p class="hero__subtitle">
+              I’m Tom (aka Arcane). This site is my portfolio hub for ACC 4510 work, projects, and professional links.
+            </p>
+
+            <!-- Call-to-action buttons -->
+            <div class="cta">
+              <!-- Internal button to About page -->
+              <a class="btn" href="about.html">Read my bio</a>
+              <!-- Placeholder resume link (replace with actual file path later) -->
+              <a class="btn btn--secondary" href="#" aria-disabled="true">Resume (PDF) — coming soon</a>
+            </div>
+
+            <!-- Quick facts -->
+            <ul class="quick-facts">
+              <li class="quick-facts__item"><span class="tag">Location</span> Utah</li>
+              <li class="quick-facts__item"><span class="tag">Focus</span> Accounting</li>
+              <li class="quick-facts__item"><span class="tag">Course</span> ACC 4510</li>
+            </ul>
+          </div>
+
+          <!-- Right side: card summary -->
+          <aside class="card hero__card" aria-label="Highlights">
+            <h2 class="card__title">Highlights</h2>
+
+            <!-- Replace these bullets with real items over time -->
+            <ul class="list">
+              <li class="list__item">Audit-style analysis practice (GL dumps, journal entry testing)</li>
+              <li class="list__item">Data storytelling (rankings, charts, year-over-year comparisons)</li>
+              <li class="list__item">Professional communication (scripts, emails, presentations)</li>
+            </ul>
+
+            <!-- Social links (replace # with real URLs) -->
+            <div class="social">
+              <a class="social__link" href="#" aria-disabled="true">LinkedIn</a>
+              <a class="social__link" href="#" aria-disabled="true">GitHub</a>
+              <a class="social__link" href="#" aria-disabled="true">Email</a>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- Projects section -->
+      <section class="section" id="projects">
+        <div class="container">
+          <h2 class="section__title">Projects</h2>
+          <p class="section__lede">
+            A running list of coursework and portfolio projects. I’ll keep adding as the semester progresses.
+          </p>
+
+          <!-- Project cards -->
+          <div class="grid">
+            <!-- Project 1 -->
+            <article class="card">
+              <h3 class="card__title">ACC 4510: Exit Survey Analysis</h3>
+              <p class="card__text">
+                Ranking courses, identifying outliers, and visualizing year-over-year trends.
+              </p>
+              <p class="card__meta">
+                <span class="pill">Data analysis</span>
+                <span class="pill">Visualization</span>
+                <span class="pill">Reporting</span>
+              </p>
+              <a class="card__link" href="#" aria-disabled="true">Link — coming soon</a>
+            </article>
+
+            <!-- Project 2 -->
+            <article class="card">
+              <h3 class="card__title">Audit Testing Tools</h3>
+              <p class="card__text">
+                Practical checks for late entries, large transactions, and documentation quality.
+              </p>
+              <p class="card__meta">
+                <span class="pill">Audit</span>
+                <span class="pill">Controls</span>
+              </p>
+              <a class="card__link" href="#" aria-disabled="true">Link — coming soon</a>
+            </article>
+
+            <!-- Project 3 -->
+            <article class="card">
+              <h3 class="card__title">Professional Writing Samples</h3>
+              <p class="card__text">
+                Scripts, emails, and concise explanations aimed at non-technical stakeholders.
+              </p>
+              <p class="card__meta">
+                <span class="pill">Communication</span>
+                <span class="pill">Business writing</span>
+              </p>
+              <a class="card__link" href="#" aria-disabled="true">Link — coming soon</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer contact section -->
+      <footer class="site-footer" id="contact">
+        <div class="container footer__grid">
+          <!-- Contact block -->
+          <div>
+            <h2 class="footer__title">Contact</h2>
+            <p class="footer__text">
+              Best way to reach me: email. (Replace the placeholder below with your real address.)
+            </p>
+
+            <!-- Replace with your email (and remove aria-disabled) -->
+            <a class="btn" href="#" aria-disabled="true">Email me</a>
+          </div>
+
+          <!-- Small print -->
+          <div class="footer__small">
+            <p>
+              <!-- Update year as needed -->
+              © <span id="year"></span> Tom G. • Built with GitHub Pages
+            </p>
+          </div>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>
