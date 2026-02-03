@@ -1,87 +1,133 @@
 <!-- about.html -->
-<!-- This is a simple About page that shares your story and links back to Home. -->
+<!-- About page: short professional bio + quick credits-style bullets. -->
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
     <!-- Basic metadata -->
     <meta charset="utf-8" /> <!-- Character encoding -->
-    <meta name="viewport" content="width=device-width, initial-scale=1" /> <!-- Responsive scaling -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" /> <!-- Responsive viewport -->
 
     <!-- Page title -->
-    <title>About | Tom G.</title>
+    <title>About | Tom G. Voice Actor</title> <!-- Browser tab title -->
 
-    <!-- Link to shared styles -->
-    <link rel="stylesheet" href="assets/style.css" /> <!-- Reuse same CSS -->
+    <!-- Description -->
+    <meta
+      name="description"
+      content="About Tom G., a voice actor: bio, style, and performance approach."
+    /> <!-- SEO description -->
 
-    <!-- Optional JS -->
-    <script defer src="assets/script.js"></script> <!-- Theme + year -->
+    <!-- Shared styling -->
+    <link rel="stylesheet" href="assets/style.css" /> <!-- CSS -->
+
+    <!-- Shared JS -->
+    <script defer src="assets/script.js"></script> <!-- JS -->
   </head>
 
   <body>
+    <!-- Skip link -->
+    <a class="skip-link" href="#main">Skip to content</a> <!-- Accessibility -->
+
     <!-- Header -->
     <header class="site-header">
-      <div class="container">
-        <!-- Branding -->
+      <div class="container header-inner">
+        <!-- Brand -->
         <div class="brand">
-          <span class="brand__mark" aria-hidden="true">TG</span> <!-- Initials badge -->
-          <span class="brand__text">Tom G.</span> <!-- Name -->
+          <div class="brand-mark" aria-hidden="true">TG</div> <!-- Monogram -->
+          <div class="brand-text">
+            <div class="brand-name">Tom G.</div> <!-- Name -->
+            <div class="brand-role">Voice Actor</div> <!-- Role -->
+          </div>
         </div>
 
         <!-- Navigation -->
         <nav class="nav" aria-label="Primary navigation">
-          <a class="nav__link" href="index.html">Home</a> <!-- Back to home -->
-          <a class="nav__link nav__link--active" href="about.html">About</a> <!-- Current page -->
-          <button class="btn btn--ghost" type="button" id="themeToggle" aria-label="Toggle theme">
-            Toggle theme
-          </button>
+          <a class="nav-link" href="index.html">Home</a> <!-- Home -->
+          <a class="nav-link nav-link-active" href="about.html">About</a> <!-- Current -->
+          <a class="nav-link" href="contact.html">Contact</a> <!-- Contact -->
         </nav>
       </div>
     </header>
 
     <!-- Main -->
-    <main class="section">
+    <main id="main" class="section">
       <div class="container narrow">
-        <!-- Page heading -->
-        <h1 class="section__title">About me</h1>
+        <!-- Page title -->
+        <h1 class="section-title">About</h1> <!-- Heading -->
 
-        <!-- Bio text (edit freely) -->
-        <p class="prose">
-          I’m Tom, an accounting student in Utah. I’m building a toolkit that blends core accounting fundamentals
-          with practical analysis—cleaning data, spotting risk signals, and explaining results clearly.
-        </p>
+        <!-- Bio block -->
+        <div class="card">
+          <h2 class="card-title">Bio</h2> <!-- Card title -->
 
-        <p class="prose">
-          This site doubles as my ACC 4510 portfolio and a place to collect projects I’m proud of. Over time,
-          I’ll add write-ups, visuals, and links to the work itself.
-        </p>
+          <p class="prose">
+            I’m Tom G., a voice actor focused on clear delivery, strong acting choices, and professional communication.
+            I enjoy commercial reads, character work, and narration, and I aim for performances that sound natural,
+            confident, and easy to direct.
+          </p> <!-- Bio paragraph -->
 
-        <!-- Interests (optional personality) -->
-        <h2 class="section__subtitle">Interests</h2>
-        <ul class="list">
-          <li class="list__item">Audit and risk thinking (finding “what could go wrong” before it does)</li>
-          <li class="list__item">Data analysis that tells a story, not just a spreadsheet</li>
-          <li class="list__item">Sci-fi and fantasy reading (yes, I contain multitudes)</li>
-        </ul>
+          <p class="prose">
+            This page is intentionally short: producers and clients should be able to learn who I am in under a minute.
+          </p> <!-- Bio paragraph -->
+        </div>
 
-        <!-- Links (replace placeholders) -->
-        <h2 class="section__subtitle">Links</h2>
-        <ul class="list">
-          <li class="list__item"><a href="#" aria-disabled="true">LinkedIn (add link)</a></li>
-          <li class="list__item"><a href="#" aria-disabled="true">GitHub (add link)</a></li>
-          <li class="list__item"><a href="#" aria-disabled="true">Resume PDF (add file + link)</a></li>
-        </ul>
+        <!-- Style / strengths -->
+        <div class="spacer"></div> <!-- Spacing -->
 
-        <!-- Back button -->
-        <a class="btn" href="index.html">Back to Home</a>
+        <div class="card">
+          <h2 class="card-title">Strengths</h2> <!-- Card title -->
+
+          <ul class="bullet-list">
+            <li class="bullet-item">Clean diction and controlled pacing</li> <!-- Bullet -->
+            <li class="bullet-item">Fast adaptation to direction and retakes</li> <!-- Bullet -->
+            <li class="bullet-item">Consistent tone across multiple takes</li> <!-- Bullet -->
+          </ul> <!-- Bullet list -->
+
+          <p class="fineprint">
+            Replace these with your actual strengths once you’ve got feedback from instructors/clients.
+          </p> <!-- Note -->
+        </div>
+
+        <!-- Credits / experience (optional placeholders) -->
+        <div class="spacer"></div> <!-- Spacing -->
+
+        <div class="card">
+          <h2 class="card-title">Credits</h2> <!-- Card title -->
+
+          <p class="card-text">
+            Add credits here as you get them (even student/indie work counts if presented clearly).
+          </p> <!-- Description -->
+
+          <ul class="detail-list">
+            <li class="detail-item">
+              <span class="detail-label">Project</span> <!-- Label -->
+              <span class="detail-value">Coming soon</span> <!-- Value -->
+            </li> <!-- Row -->
+            <li class="detail-item">
+              <span class="detail-label">Role</span> <!-- Label -->
+              <span class="detail-value">Coming soon</span> <!-- Value -->
+            </li> <!-- Row -->
+            <li class="detail-item">
+              <span class="detail-label">Year</span> <!-- Label -->
+              <span class="detail-value">2026</span> <!-- Value -->
+            </li> <!-- Row -->
+          </ul> <!-- Details -->
+        </div>
+
+        <!-- CTA -->
+        <div class="spacer"></div> <!-- Spacing -->
+
+        <div class="cta-row">
+          <a class="btn" href="contact.html">Contact</a> <!-- CTA -->
+          <a class="btn btn-secondary" href="index.html">Back to Home</a> <!-- Secondary -->
+        </div>
       </div>
     </main>
 
     <!-- Footer -->
     <footer class="site-footer">
-      <div class="container">
-        <p class="footer__small">
-          © <span id="year"></span> Tom G.
-        </p>
+      <div class="container footer-inner">
+        <p class="footer-text">
+          © <span id="year"></span> Tom G. • Voice Actor
+        </p> <!-- Footer -->
       </div>
     </footer>
   </body>
