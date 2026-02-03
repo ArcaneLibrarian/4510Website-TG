@@ -159,7 +159,7 @@ body {
       rgba(7, 10, 18, 0.78), /* Give strong contrast for text */
       rgba(7, 10, 18, 0.90)  /* Slightly darker at bottom */
     ), /* End overlay */
-    url("photos/360_F_712277895_SLYww6vGgGhl5tTZu4mG2UFA6vKId1jj.jpg"); /* Image path relative to assets/style.css */
+    url("photos/mic.jpg"); /* Image path relative to assets/style.css */
 
   background-size: cover; /* Cover hero area */
   background-position: center; /* Center the image */
