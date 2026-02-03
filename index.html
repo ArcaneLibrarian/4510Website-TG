@@ -1,53 +1,52 @@
 <!-- index.html -->
-<!-- This is the home page for your GitHub Pages site. -->
+<!-- Home page: focuses on demos + clear professional positioning. -->
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
-    <!-- Basic metadata -->
-    <meta charset="utf-8" /> <!-- Character encoding -->
-    <meta name="viewport" content="width=device-width, initial-scale=1" /> <!-- Responsive scaling -->
+    <!-- Basic document metadata -->
+    <meta charset="utf-8" /> <!-- Sets character encoding -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" /> <!-- Mobile-friendly scaling -->
 
-    <!-- Page title (shows in browser tab) -->
-    <title>Tom G. | Accounting Student</title>
+    <!-- Title shown in the browser tab -->
+    <title>Tom G. | Voice Actor</title> <!-- Page title -->
 
-    <!-- Site description (helps with SEO/snippets) -->
-    <meta name="description" content="Personal site for Tom G. — accounting student portfolio, projects, and contact info." />
+    <!-- Description used by search engines and link previews -->
+    <meta
+      name="description"
+      content="Voice acting demos, brief bio, and contact info for Tom G."
+    /> <!-- SEO description -->
 
-    <!-- Link to the shared stylesheet -->
-    <link rel="stylesheet" href="assets/style.css" /> <!-- Styles for all pages -->
+    <!-- Theme color used by some browsers for the UI -->
+    <meta name="theme-color" content="#0b0f1a" /> <!-- Dark theme color hint -->
 
-    <!-- Optional: JavaScript for small enhancements -->
-    <script defer src="assets/script.js"></script> <!-- Runs after HTML loads -->
+    <!-- Link to site styles -->
+    <link rel="stylesheet" href="assets/style.css" /> <!-- Shared CSS -->
+
+    <!-- Load JS after HTML is parsed -->
+    <script defer src="assets/script.js"></script> <!-- Shared JS -->
   </head>
 
   <body>
-    <!-- Skip link for accessibility (keyboard users) -->
-    <a class="skip-link" href="#main">Skip to content</a>
+    <!-- Accessibility: skip link for keyboard navigation -->
+    <a class="skip-link" href="#main">Skip to content</a> <!-- Jumps to main content -->
 
-    <!-- Header: site name + navigation -->
+    <!-- Site header -->
     <header class="site-header">
-      <div class="container">
-        <!-- Branding / site title -->
+      <div class="container header-inner">
+        <!-- Brand / name block -->
         <div class="brand">
-          <span class="brand__mark" aria-hidden="true">TG</span> <!-- Simple initials badge -->
-          <span class="brand__text">Tom G.</span> <!-- Your name -->
+          <div class="brand-mark" aria-hidden="true">TG</div> <!-- Simple monogram badge -->
+          <div class="brand-text">
+            <div class="brand-name">Tom G.</div> <!-- Display name -->
+            <div class="brand-role">Voice Actor</div> <!-- Short role label -->
+          </div>
         </div>
 
-        <!-- Navigation links -->
+        <!-- Primary navigation -->
         <nav class="nav" aria-label="Primary navigation">
-          <!-- Home link -->
-          <a class="nav__link nav__link--active" href="index.html">Home</a>
-          <!-- About link -->
-          <a class="nav__link" href="about.html">About</a>
-          <!-- External link placeholder (update when ready) -->
-          <a class="nav__link" href="#projects">Projects</a>
-          <!-- Contact link (scrolls to footer section) -->
-          <a class="nav__link" href="#contact">Contact</a>
-
-          <!-- Theme toggle button (optional) -->
-          <button class="btn btn--ghost" type="button" id="themeToggle" aria-label="Toggle theme">
-            Toggle theme
-          </button>
+          <a class="nav-link nav-link-active" href="index.html">Home</a> <!-- Current page -->
+          <a class="nav-link" href="about.html">About</a> <!-- About page -->
+          <a class="nav-link" href="contact.html">Contact</a> <!-- Contact page -->
         </nav>
       </div>
     </header>
@@ -56,128 +55,123 @@
     <main id="main">
       <!-- Hero section -->
       <section class="hero">
-        <div class="container hero__grid">
-          <!-- Left side: intro text -->
-          <div class="hero__copy">
-            <h1 class="hero__title">
-              Accounting student building practical skills—one project at a time.
-            </h1>
+        <div class="container hero-grid">
+          <!-- Hero copy -->
+          <div class="hero-copy">
+            <h1 class="hero-title">Professional voice work with a clean, confident read.</h1> <!-- Headline -->
 
-            <p class="hero__subtitle">
-              I’m Tom (aka Arcane). This site is my portfolio hub for ACC 4510 work, projects, and professional links.
-            </p>
+            <p class="hero-subtitle">
+              Commercial • Character • Narration
+            </p> <!-- Specialty line -->
 
-            <!-- Call-to-action buttons -->
-            <div class="cta">
-              <!-- Internal button to About page -->
-              <a class="btn" href="about.html">Read my bio</a>
-              <!-- Placeholder resume link (replace with actual file path later) -->
-              <a class="btn btn--secondary" href="#" aria-disabled="true">Resume (PDF) — coming soon</a>
+            <p class="hero-body">
+              Demos are below. For bookings and inquiries, contact me by email.
+            </p> <!-- Clear instruction -->
+
+            <!-- Primary call to action -->
+            <div class="cta-row">
+              <a class="btn" href="contact.html">Contact</a> <!-- CTA button -->
+              <a class="btn btn-secondary" href="about.html">About</a> <!-- Secondary button -->
             </div>
-
-            <!-- Quick facts -->
-            <ul class="quick-facts">
-              <li class="quick-facts__item"><span class="tag">Location</span> Utah</li>
-              <li class="quick-facts__item"><span class="tag">Focus</span> Accounting</li>
-              <li class="quick-facts__item"><span class="tag">Course</span> ACC 4510</li>
-            </ul>
           </div>
 
-          <!-- Right side: card summary -->
-          <aside class="card hero__card" aria-label="Highlights">
-            <h2 class="card__title">Highlights</h2>
+          <!-- Hero card: quick stats / “one glance” info -->
+          <aside class="card hero-card" aria-label="Quick details">
+            <h2 class="card-title">Quick Details</h2> <!-- Card title -->
 
-            <!-- Replace these bullets with real items over time -->
-            <ul class="list">
-              <li class="list__item">Audit-style analysis practice (GL dumps, journal entry testing)</li>
-              <li class="list__item">Data storytelling (rankings, charts, year-over-year comparisons)</li>
-              <li class="list__item">Professional communication (scripts, emails, presentations)</li>
-            </ul>
+            <ul class="detail-list">
+              <li class="detail-item">
+                <span class="detail-label">Location</span> <!-- Label -->
+                <span class="detail-value">Utah (Remote)</span> <!-- Value -->
+              </li> <!-- Detail row -->
+              <li class="detail-item">
+                <span class="detail-label">Turnaround</span> <!-- Label -->
+                <span class="detail-value">As scheduled</span> <!-- Value -->
+              </li> <!-- Detail row -->
+              <li class="detail-item">
+                <span class="detail-label">Delivery</span> <!-- Label -->
+                <span class="detail-value">WAV / MP3</span> <!-- Value -->
+              </li> <!-- Detail row -->
+            </ul> <!-- Detail list -->
 
-            <!-- Social links (replace # with real URLs) -->
-            <div class="social">
-              <a class="social__link" href="#" aria-disabled="true">LinkedIn</a>
-              <a class="social__link" href="#" aria-disabled="true">GitHub</a>
-              <a class="social__link" href="#" aria-disabled="true">Email</a>
-            </div>
+            <!-- Small note to keep it professional -->
+            <p class="fineprint">
+              Replace these details with your real specs (mic/interface, booth, etc.) when ready.
+            </p> <!-- Fine print -->
           </aside>
         </div>
       </section>
 
-      <!-- Projects section -->
-      <section class="section" id="projects">
+      <!-- Demos section -->
+      <section class="section">
         <div class="container">
-          <h2 class="section__title">Projects</h2>
-          <p class="section__lede">
-            A running list of coursework and portfolio projects. I’ll keep adding as the semester progresses.
-          </p>
+          <h2 class="section-title">Demos</h2> <!-- Section title -->
+          <p class="section-lede">
+            Click play to listen. Download links are optional—add them if clients ask.
+          </p> <!-- Section lead -->
 
-          <!-- Project cards -->
+          <!-- Demo grid -->
           <div class="grid">
-            <!-- Project 1 -->
+            <!-- Demo card 1 -->
             <article class="card">
-              <h3 class="card__title">ACC 4510: Exit Survey Analysis</h3>
-              <p class="card__text">
-                Ranking courses, identifying outliers, and visualizing year-over-year trends.
-              </p>
-              <p class="card__meta">
-                <span class="pill">Data analysis</span>
-                <span class="pill">Visualization</span>
-                <span class="pill">Reporting</span>
-              </p>
-              <a class="card__link" href="#" aria-disabled="true">Link — coming soon</a>
-            </article>
+              <h3 class="card-title">Commercial Demo</h3> <!-- Demo title -->
+              <p class="card-text">Bright, clear reads with strong product energy.</p> <!-- Demo description -->
 
-            <!-- Project 2 -->
-            <article class="card">
-              <h3 class="card__title">Audit Testing Tools</h3>
-              <p class="card__text">
-                Practical checks for late entries, large transactions, and documentation quality.
-              </p>
-              <p class="card__meta">
-                <span class="pill">Audit</span>
-                <span class="pill">Controls</span>
-              </p>
-              <a class="card__link" href="#" aria-disabled="true">Link — coming soon</a>
-            </article>
+              <!-- Audio player (replace src with your real file) -->
+              <audio class="audio" controls preload="none">
+                <source src="assets/audio/tomg-commercial-demo.mp3" type="audio/mpeg" /> <!-- MP3 source -->
+                Your browser does not support the audio element. <!-- Fallback text -->
+              </audio> <!-- Audio player -->
 
-            <!-- Project 3 -->
+              <p class="fineprint">
+                File path: <code>assets/audio/tomg-commercial-demo.mp3</code>
+              </p> <!-- Helpful hint -->
+            </article> <!-- End demo card 1 -->
+
+            <!-- Demo card 2 -->
             <article class="card">
-              <h3 class="card__title">Professional Writing Samples</h3>
-              <p class="card__text">
-                Scripts, emails, and concise explanations aimed at non-technical stakeholders.
-              </p>
-              <p class="card__meta">
-                <span class="pill">Communication</span>
-                <span class="pill">Business writing</span>
-              </p>
-              <a class="card__link" href="#" aria-disabled="true">Link — coming soon</a>
-            </article>
-          </div>
+              <h3 class="card-title">Character Demo</h3> <!-- Demo title -->
+              <p class="card-text">Distinct voices, clean acting choices, consistent tone.</p> <!-- Demo description -->
+
+              <!-- Audio player (replace src with your real file) -->
+              <audio class="audio" controls preload="none">
+                <source src="assets/audio/tomg-character-demo.mp3" type="audio/mpeg" /> <!-- MP3 source -->
+                Your browser does not support the audio element. <!-- Fallback text -->
+              </audio> <!-- Audio player -->
+
+              <p class="fineprint">
+                File path: <code>assets/audio/tomg-character-demo.mp3</code>
+              </p> <!-- Helpful hint -->
+            </article> <!-- End demo card 2 -->
+
+            <!-- Demo card 3 -->
+            <article class="card">
+              <h3 class="card-title">Narration Demo</h3> <!-- Demo title -->
+              <p class="card-text">Steady pacing, clarity, and listener-friendly warmth.</p> <!-- Demo description -->
+
+              <!-- Audio player (replace src with your real file) -->
+              <audio class="audio" controls preload="none">
+                <source src="assets/audio/tomg-narration-demo.mp3" type="audio/mpeg" /> <!-- MP3 source -->
+                Your browser does not support the audio element. <!-- Fallback text -->
+              </audio> <!-- Audio player -->
+
+              <p class="fineprint">
+                File path: <code>assets/audio/tomg-narration-demo.mp3</code>
+              </p> <!-- Helpful hint -->
+            </article> <!-- End demo card 3 -->
+          </div> <!-- End grid -->
         </div>
       </section>
 
-      <!-- Footer contact section -->
-      <footer class="site-footer" id="contact">
-        <div class="container footer__grid">
-          <!-- Contact block -->
-          <div>
-            <h2 class="footer__title">Contact</h2>
-            <p class="footer__text">
-              Best way to reach me: email. (Replace the placeholder below with your real address.)
-            </p>
-
-            <!-- Replace with your email (and remove aria-disabled) -->
-            <a class="btn" href="#" aria-disabled="true">Email me</a>
-          </div>
-
-          <!-- Small print -->
-          <div class="footer__small">
-            <p>
-              <!-- Update year as needed -->
-              © <span id="year"></span> Tom G. • Built with GitHub Pages
-            </p>
-          </div>
+      <!-- Footer -->
+      <footer class="site-footer">
+        <div class="container footer-inner">
+          <p class="footer-text">
+            © <span id="year"></span> Tom G. • Voice Actor
+          </p> <!-- Footer text -->
+          <p class="footer-text">
+            <a class="footer-link" href="contact.html">Contact</a>
+          </p> <!-- Footer link -->
         </div>
       </footer>
     </main>
